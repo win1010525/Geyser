@@ -69,8 +69,6 @@ public class LoginEncryptionUtils {
 
             geyser.getLogger().debug(String.format("Is player data signed? %s", result.signed()));
 
-            }
-
             IdentityData extraData = result.identityClaims().extraData;
             session.setAuthenticationData(new AuthData(extraData.displayName, extraData.identity, extraData.xuid));
             session.setCertChainData(certChainData);
